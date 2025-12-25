@@ -1,12 +1,18 @@
 # Game of Life
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-0.0.1--alpha-green.svg)](METADATA.json)
+
+> 📋 **Project Metadata**: For comprehensive project information including structure, dependencies, and technical specifications, see [METADATA.json](METADATA.json)
+
 ## Table of contents
-1. [Overview](#overview)
-2. [Game modes](#game_modes)
+1. [Project Metadata](#metadata)
+2. [Overview](#overview)
+3. [Game modes](#game_modes)
     - [Infinite](#infinite)
     - [Creator](#creator)
-3. [Interface](#interface)
-4. [Architecture](#architecture)
+4. [Interface](#interface)
+5. [Architecture](#architecture)
     - [Variables and events](#variables_and_events)
         - [Constant variables](#constants)
         - [Events](#events)
@@ -14,9 +20,24 @@
     - [Packing](#packing)
         - [Packing game](#packing_game)
         - [Unpacking game](#unpacking_game)
-5. [Development](#development)
+6. [Development](#development)
     - [Requirements](#requirements)
     - [Development summary](#dev_summary)
+
+## Project Metadata <a name="metadata"></a>
+
+This repository contains comprehensive metadata in [METADATA.json](METADATA.json) that includes:
+
+- **Project Information**: Name, version, description, license, and authors
+- **Technical Stack**: Cairo smart contracts on StarkNet (Layer 2 Ethereum)
+- **Repository Structure**: Contracts, indexer, tests, and utilities
+- **Build System**: Protostar 0.2.4 configuration
+- **Contract Interface**: Complete list of external and view functions
+- **Game Parameters**: Grid dimensions, packing scheme, and credit requirements
+- **Networks**: Supported deployment networks (mainnet, testnet, devnet)
+- **Dependencies**: Required tools and libraries
+
+The metadata file provides a structured overview of the entire project, making it easier for developers and users to understand the system architecture and capabilities.
 
 ## Overview <a name="overview"></a>
 An implementation of Conway's Game of Life as a contract on StarkNet, written

@@ -1,0 +1,109 @@
+{
+  "name": "game-of-life",
+  "full_name": "GoL2-Contract - Game of Life on StarkNet",
+  "version": "0.0.1-alpha",
+  "description": "A StarkNet implementation of Conway's Game of Life written in Cairo, with an interactive element where players can alter the state of the game and affect the future of the simulation.",
+  "license": "MIT",
+  "authors": [
+    "wojciech.szymczyk@swmansion.com",
+    "perama-v"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wsx7524999/GoL2-Contract"
+  },
+  "language": {
+    "primary": "Cairo",
+    "secondary": ["TypeScript", "JavaScript"]
+  },
+  "platform": "StarkNet",
+  "blockchain": "Layer 2 Ethereum",
+  "contract_type": "Smart Contract",
+  "keywords": [
+    "cairo",
+    "starknet",
+    "game-of-life",
+    "conway",
+    "blockchain",
+    "smart-contract",
+    "layer2",
+    "ethereum",
+    "l2",
+    "interactive-simulation"
+  ],
+  "features": [
+    "Conway's Game of Life implementation on StarkNet",
+    "Two game modes: Infinite and Creator",
+    "Credit token system for game interactions",
+    "Cell revival mechanism",
+    "Efficient game state packing into single felt",
+    "Wrapping boundaries for infinite grid simulation",
+    "Event emission for indexing",
+    "Upgradeable proxy pattern"
+  ],
+  "components": {
+    "contracts": {
+      "path": "contracts/",
+      "description": "Cairo smart contracts implementing Game of Life logic and ERC20 token",
+      "main_contract": "contracts/gol.cairo"
+    },
+    "indexer": {
+      "path": "indexer/",
+      "description": "TypeScript-based indexer for Game of Life contract events",
+      "main_file": "indexer/src/index.ts"
+    },
+    "tests": {
+      "path": "tests/",
+      "description": "Test suite for smart contracts"
+    },
+    "utils": {
+      "path": "contracts/utils/",
+      "description": "Helper functions, constants, and events for contract"
+    }
+  },
+  "build_system": {
+    "tool": "protostar",
+    "version": "0.2.4",
+    "config_file": "protostar.toml"
+  },
+  "dependencies": {
+    "cairo-lang": "Required for Cairo compilation and deployment",
+    "protostar": "Build and testing framework",
+    "openzeppelin-contracts": "Proxy pattern implementation"
+  },
+  "networks": {
+    "supported": [
+      "alpha-mainnet",
+      "alpha-goerli",
+      "devnet"
+    ]
+  },
+  "contract_interface": {
+    "external_functions": [
+      "initializer",
+      "upgrade",
+      "evolve",
+      "create",
+      "give_life_to_cell"
+    ],
+    "view_functions": [
+      "view_game",
+      "get_current_generation"
+    ]
+  },
+  "game_parameters": {
+    "grid_dimensions": 15,
+    "total_cells": 225,
+    "packing_scheme": "Single felt representation",
+    "infinite_game_genesis": "39132555273291485155644251043342963441664",
+    "create_credit_requirement": 10,
+    "give_life_credit_requirement": 1
+  },
+  "documentation": {
+    "main": "README.md",
+    "indexer": "indexer/README.md"
+  },
+  "copyright": "Copyright (c) 2021 perama-v",
+  "created": "2021",
+  "last_updated": "2025-12-25"
+}
