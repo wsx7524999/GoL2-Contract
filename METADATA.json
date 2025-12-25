@@ -95,7 +95,10 @@
     "grid_dimensions": 15,
     "total_cells": 225,
     "packing_scheme": "Single felt representation",
-    "infinite_game_genesis": "39132555273291485155644251043342963441664",
+    "infinite_game_genesis": {
+      "value": "39132555273291485155644251043342963441664",
+      "description": "The genesis state for the game in infinite mode, also used as game_id. This is the packed representation of the 'acorn' pattern - a methuselah that takes 5206 generations to stabilize."
+    },
     "create_credit_requirement": 10,
     "give_life_credit_requirement": 1
   },
